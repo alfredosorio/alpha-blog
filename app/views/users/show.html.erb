@@ -1,0 +1,13 @@
+<h1> Welcome to <%= @user.username %>'s page! </h1>
+
+<p>
+  Username: <%= @user.username %>
+</p>
+
+<p>
+  Description: <%= @user.email %>
+</p>
+
+<%= render '/articles/article', obj: @user.articles %>
+
+<%= link_to 'Log out', logout_path, method: :delete %>
